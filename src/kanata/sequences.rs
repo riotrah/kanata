@@ -298,14 +298,10 @@ pub(super) fn do_successful_sequence_termination(
                 }
                 _ => true,
             });
-            for k in sequence.iter().copied() {
+            for osc in state.raw_oscs.iter().copied() {
                 // Check for pressed modifiers and don't input backspaces for
                 // those since they don't output characters that can be
                 // backspaced.
-                if k == KEY_OVERLAP_MARKER {
-                    continue;
-                };
-                let osc = OsCode::from(k & MASK_KEYCODES);
                 match osc {
                     // Known bug: most non-characters-outputting keys are not
                     // listed. I'm too lazy to list them all. Just use
