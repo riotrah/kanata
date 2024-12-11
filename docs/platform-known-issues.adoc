@@ -18,8 +18,10 @@ which map to the binaries
 
 == Windows 11 LLHOOK
 
-* The emoji picker does not work properly
+* [.line-through]#The emoji picker does not work properly#
+** EDIT: according to commenters in this issue, a recent Windows update might have fixed this
 ** https://github.com/jtroo/kanata/issues/240
+
 
 == Windows 10+11 LLHOOK
 
